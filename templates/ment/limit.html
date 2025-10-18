@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atm取款机 - 交易限额</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/bg.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/view.css')}}"
+    />
+  </head>
+  <body>
+    <div id="container">
+      <h1>交易限额</h1>
+      <div class="balance"></div>
+      <a href="{{ url_for('management') }}" class="back-link">返回主菜单</a>
+    </div>
+  </body>
+</html>

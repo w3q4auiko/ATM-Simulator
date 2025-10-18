@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atm取款机 - 主菜单</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/bg.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/view.css')}}"
+    />
+  </head>
+  <body>
+    <div id="container">
+      <div class="welcome">
+        <h1>欢迎, {{ name }}!</h1>
+        <p>请选择您需要的服务:</p>
+      </div>
+      <ul>
+        <li><a href="{{ url_for('deposit') }}">存款</a></li>
+        <li><a href="{{ url_for('withdraw') }}">取款</a></li>
+        <li><a href="{{ url_for('transfer')}}">转账</a></li>
+        <li><a href="{{ url_for('management') }}">账户管理</a></li>
+        <li><a href="{{ url_for('logout') }}">退出</a></li>
+      </ul>
+    </div>
+  </body>
+</html>

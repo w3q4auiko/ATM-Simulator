@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/bg.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/view.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/record.css') }}"
+    />
+
+    <title>Atm取款机 - 交易记录</title>
+  </head>
+  <body>
+    <div id="container">
+      <h1>交易明细</h1>
+
+      {% if records %}
+      <table>
+        <thead>
+          <tr>
+            <th>流水号</th>
+            <th>交易类型</th>
+            <th>交易金额</th>
+            <th>卡号</th>
+            <th>时间</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for record in records %}
+          <tr>
+            <td>{{ record.id }}</td>
+            <td>{{ record.type }}</td>
+            <td>￥{{ "%.2f"|format(record.amount) }}</td>
+            <td>{{ record.target_card if record.target_card else '-' }}</td>
+            <td>{{ record.timestamp }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      {% else %}
+      <p style="text-align: center">暂无交易记录。</p>
+      {% endif %} {% if total_pages > 1 %}
+      <div class="pagination">
+        {% if page > 1 %}
+        <a href="{{ url_for('records', page=page-1) }}">上一页</a>
+        {% endif %}
+        <span>第 {{ page }} / {{ total_pages }} 页</span>
+        {% if page < total_pages %}
+        <a href="{{ url_for('records', page=page+1) }}">下一页</a>
+        {% endif %}
+      </div>
+      {% endif %}
+      <a href="{{ url_for('management') }}" class="back-link">返回主菜单</a>
+    </div>
+  </body>
+</html>

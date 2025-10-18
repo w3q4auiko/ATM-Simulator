@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atm取款机 - 存款</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/bg.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/view.css')}}"
+    />
+  </head>
+  <body>
+    <div id="container">
+      <h1>存款</h1>
+      {% if error %}
+      <div class="error">{{ error }}</div>
+      {% endif %} {% if success %}
+      <div class="success">{{ success }}</div>
+      {% endif %}
+      <form method="POST">
+        <div class="form-group">
+          <label for="amount">请输入存入金额 (¥):</label>
+          <input
+            type="text"
+            id="amount"
+            name="amount"
+            step="0.01"
+            min="0.01"
+            required
+          />
+        </div>
+        <button type="submit">确认存款</button>
+        <a href="{{ url_for('menu') }}" class="back-link">返回主菜单</a>
+      </form>
+    </div>
+  </body>
+</html>

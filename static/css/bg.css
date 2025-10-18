@@ -1,0 +1,17 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url("../img/SL-072622-51930-20.jpg");
+  background-size: 100%;
+}
+
+#container {
+  position: relative;
+  top: 52px;
+  height: 452px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(3px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 10px 44px 30px 44px;
+}

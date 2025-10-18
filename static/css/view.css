@@ -1,0 +1,146 @@
+body {
+  font-family: Arial, sans-serif;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  color: #222;
+}
+
+.balance {
+  font-size: 24px;
+  margin: 20px 0;
+  text-align: center;
+  color: #444;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #444;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #000;
+}
+
+button:active {
+  background-color: #555;
+}
+
+.error {
+  color: red;
+}
+
+.success {
+  color: green;
+}
+
+.back-link {
+  position: absolute;
+  right: 32px;
+  bottom: 20px;
+  width: 80px;
+  text-decoration: none;
+  color: #555;
+}
+
+.back-link:hover {
+  color: #000;
+}
+
+.welcome h1 {
+  color: #222;
+}
+
+.welcome p {
+  color: #444;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin: 10px 0;
+}
+
+ul li a {
+  display: block;
+  padding: 10px;
+  background-color: #333;
+  text-decoration: none;
+  color: #fff;
+  border-radius: 5px;
+  border: 1px solid #999;
+}
+
+ul li a:hover {
+  background-color: #000;
+}
+
+ul li a:active {
+  background-color: #555;
+}
+
+.welcome {
+  margin-bottom: 20px;
+}
+
+table {
+  width: 90%;
+  margin: 20px auto;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 12px;
+  border-top-right-radius: 12px;
+  border-top-left-radius: 12px;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+.pagination {
+  position: absolute;
+  left: 250px;
+  bottom: 37px;
+}
+
+.pagination a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.pagination span {
+  font-weight: bold;
+  color: #555;
+}

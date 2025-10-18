@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atm取款机 - 登录</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/bg.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/view.css')}}"
+    />
+  </head>
+  <body>
+    <div id="container">
+      <h1>ATM登录</h1>
+      {% if error %}
+      <div class="error">{{ error }}</div>
+      {% endif %}
+      <form method="POST">
+        <div class="form-group">
+          <label for="card_number">玩家卡号:</label>
+          <input type="text" id="card_number" name="card_number" required />
+        </div>
+        <div class="form-group">
+          <label for="pin">密码:</label>
+          <input type="password" id="pin" name="pin" required />
+        </div>
+        <button type="submit">登录</button>
+      </form>
+    </div>
+  </body>
+</html>
